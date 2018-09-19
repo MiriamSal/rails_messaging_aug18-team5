@@ -6,8 +6,15 @@ Feature: User can sign up to new account
 
 Background:
     Given User provide the following credentials
-    | name  | email         | password     | password confirmation |
-    | Rhon  | rhon@work.com | rhonpassword | rhonpassword          |
+    | name  | email         | password     | 
+    | Rhon  | rhon@work.com | rhonpassword | 
 
 Scenario: User can sign up to a new account
     Given I am on the landing page
+    When I click on "Sign up"
+    And I fill in "Name" with "Rhon"
+    And I fill in "Email" with "rhon@work.com"
+    And I fill in "Password" with "rhonpassword"
+    And I fill in "Password confirmation" with "rhonpassword"
+    And i click on "Create"
+    Then I should see message "Welcome! You have signed up successfully."
