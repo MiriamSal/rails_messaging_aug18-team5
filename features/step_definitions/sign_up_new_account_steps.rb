@@ -12,15 +12,15 @@ When("I click on {string}") do |string|
   click_on string 
 end
 
-When("I fill in {string} with {string}") do |string, string2|
-  pending # Write code here that turns the phrase above into concrete actions
+And("I fill in {string} with {string}") do |string1, string2|
+  fill_in(string1, with: string2)
 end
   
 When("i click on {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+  click_on string
 end
   
-Then("I should see message {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Then("I should see a message {string}") do |message|
+  expect(page).to have_content message
 end
   
