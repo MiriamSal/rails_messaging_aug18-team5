@@ -17,4 +17,4 @@ Scenario: User can sign up to a new account
     And I fill in "Password" with "rhonpswd"
     And I fill in "Password confirmation" with "rhonpswd"
     And I click on "Create"
-    Then I should see a message "Welcome! You have signed up successfully."
+    Then I should see a message
