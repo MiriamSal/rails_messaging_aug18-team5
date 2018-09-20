@@ -20,7 +20,7 @@ When("i click on {string}") do |string|
   click_on string
 end
   
-Then("I should see a message") do
-  expect(current_path).to eq user_registration_path
+Then("I should see a message {string}") do |message|
+  expect(page).to have_content message
 end
   
